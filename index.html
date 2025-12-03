@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>空白页面 UI</title>
+    <title>贷后指标面板</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -18,72 +18,157 @@
       body {
         margin: 0;
         min-height: 100vh;
+        padding: 48px clamp(16px, 6vw, 72px);
+        background: radial-gradient(circle at top, #ffffff, #f3f4f6 65%);
         display: flex;
-        align-items: center;
         justify-content: center;
-        background: radial-gradient(circle at top, #ffffff, #f5f5f5 60%);
       }
 
       main {
-        width: min(720px, 90vw);
-        height: min(420px, 70vh);
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 24px;
-        backdrop-filter: blur(16px);
+        width: min(1200px, 100%);
+        background: #ffffff;
+        border-radius: 32px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 35px 80px rgba(15, 23, 42, 0.1);
+        padding: clamp(24px, 4vw, 48px);
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        gap: 16px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        gap: 32px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
 
       h1 {
         margin: 0;
-        font-size: clamp(24px, 4vw, 36px);
+        font-size: clamp(26px, 4vw, 38px);
         font-weight: 600;
-        color: #1f1f1f;
+        color: #0f172a;
       }
 
       p {
         margin: 0;
-        color: #6b7280;
+        color: #475569;
+        font-size: 16px;
       }
 
-      .ghost-grid {
-        position: absolute;
-        width: 90%;
-        height: 80%;
-        border-radius: 20px;
-        border: 2px dashed rgba(107, 114, 128, 0.4);
-        pointer-events: none;
+      .fields-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
       }
 
-      button {
-        padding: 12px 24px;
-        border-radius: 12px;
-        border: none;
-        background: #2563eb;
-        color: #ffffff;
-        font-size: 15px;
+      .field-card {
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-radius: 18px;
+        padding: 18px;
+        background: linear-gradient(145deg, #ffffff, #f8fafc);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .field-label {
+        font-size: 14px;
+        color: #64748b;
+        letter-spacing: 0.4px;
+      }
+
+      .field-value {
+        font-size: 20px;
         font-weight: 600;
-        cursor: pointer;
-        transition: transform 150ms ease, box-shadow 150ms ease;
-      }
-
-      button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+        color: #111827;
       }
     </style>
   </head>
   <body>
     <main>
-      <div class="ghost-grid"></div>
-      <h1>空白画布</h1>
-      <p>一个干净的 UI 起点，等待你的创意。</p>
-      <button>开始设计</button>
+      <header>
+        <h1>贷后核心指标</h1>
+        <p>字段一览，方便填充与比对。</p>
+      </header>
+      <section class="fields-grid">
+        <article class="field-card">
+          <span class="field-label">日期</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">项目</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">放款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">实际还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">在贷余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">提前还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">账单日还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">逾期</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">逾期90+还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">放款减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">催收减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">系统核销减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">总在贷余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">未到期余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+7内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+30内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+90内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">90天内还款</span>
+          <span class="field-value">—</span>
+        </article>
+      </section>
     </main>
   </body>
 </html>
