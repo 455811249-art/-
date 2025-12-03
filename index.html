@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贷后指标面板</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 48px clamp(16px, 6vw, 72px);
+        background: radial-gradient(circle at top, #ffffff, #f3f4f6 65%);
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        width: min(1200px, 100%);
+        background: #ffffff;
+        border-radius: 32px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 35px 80px rgba(15, 23, 42, 0.1);
+        padding: clamp(24px, 4vw, 48px);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      p {
+        margin: 0;
+        color: #475569;
+        font-size: 16px;
+      }
+
+      .fields-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      .field-card {
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-radius: 18px;
+        padding: 18px;
+        background: linear-gradient(145deg, #ffffff, #f8fafc);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .field-label {
+        font-size: 14px;
+        color: #64748b;
+        letter-spacing: 0.4px;
+      }
+
+      .field-value {
+        font-size: 20px;
+        font-weight: 600;
+        color: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>贷后核心指标</h1>
+        <p>字段一览，方便填充与比对。</p>
+      </header>
+      <section class="fields-grid">
+        <article class="field-card">
+          <span class="field-label">日期</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">项目</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">放款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">实际还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">在贷余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">提前还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">账单日还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">逾期</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">逾期90+还款</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">放款减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">催收减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">系统核销减免</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">总在贷余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">未到期余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+7内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+30内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">D+90内余额</span>
+          <span class="field-value">—</span>
+        </article>
+        <article class="field-card">
+          <span class="field-label">90天内还款</span>
+          <span class="field-value">—</span>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
