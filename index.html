@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>空白页面 UI</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top, #ffffff, #f5f5f5 60%);
+      }
+
+      main {
+        width: min(720px, 90vw);
+        height: min(420px, 70vh);
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 24px;
+        backdrop-filter: blur(16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 600;
+        color: #1f1f1f;
+      }
+
+      p {
+        margin: 0;
+        color: #6b7280;
+      }
+
+      .ghost-grid {
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        border-radius: 20px;
+        border: 2px dashed rgba(107, 114, 128, 0.4);
+        pointer-events: none;
+      }
+
+      button {
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: none;
+        background: #2563eb;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 150ms ease, box-shadow 150ms ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="ghost-grid"></div>
+      <h1>空白画布</h1>
+      <p>一个干净的 UI 起点，等待你的创意。</p>
+      <button>开始设计</button>
+    </main>
+  </body>
+</html>
